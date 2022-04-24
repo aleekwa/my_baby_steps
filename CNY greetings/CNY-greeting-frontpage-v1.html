@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022 CNY Card</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .greeting-card {
+        margin: 0 auto;
+        min-width: 100px;
+        max-width: 820px;
+        background: url(https://i.pinimg.com/originals/9d/a9/c3/9da9c3db59ec4283a663e72c645f95a4.jpg);
+        background-position: center center;
+        background-size: cover;
+        text-align: center;
+        padding: 30px 20px 20px 20px;
+        box-shadow: 5px 5px 5px 0px rgba(207, 205, 207, 1);
+        border-radius: 10px;
+              }
+
+      .greeting-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        align-content: center;
+        padding: 15px 40px;
+        
+      }
+
+      h1 {
+        padding: 5px;
+        color: goldenrod;
+        font-size: 32px;
+        font-family: "Righteous", cursive, sans-serif;
+      }
+
+      .zodiac-image {
+        justify-content: center;
+        align-content: center;
+      }
+
+     .zodiac-tiger {
+        width: 180px;
+        height: 180px;
+      }
+
+      .zodiac-rat,
+      .zodiac-ox,
+      .zodiac-rabbit,
+      .zodiac-dragon,
+      .zodiac-snake,
+      .zodiac-horse,
+      .zodiac-dog,
+      .zodiac-pig,
+      .zodiac-rooster,
+      .zodiac-monkey,
+      .zodiac-sheep {
+        width: 180px;
+        height: 180px;
+        display: none;
+      }
+
+      .greeting-message {
+        max-width: 450px;
+        font-size: 22px;
+        font-style: italic;
+        color: #005874;
+        font-family: "Righteous", cursive, sans-serif;
+      }
+
+      button {
+        margin: 0 auto;
+        font-size: 12px;
+        box-shadow: 2px 2px 2px 0px rgba(207, 205, 207, 1);
+        border-radius: 3px;
+        border: 0px;
+        padding: 8px 15px;
+        background: rgb(238, 210, 141);
+        cursor: pointer;
+        color: rgb(85, 84, 84);
+        
+      }
+
+      button:hover {
+        font-weight: bold;
+      }
+
+     
+
+    </style>
+  </head>
+  <body>
+    <div class="greeting-card">
+      <h1>Happy Lunar New Year!</h1>
+      <div class="greeting-content">
+        <div class="zodiac-image">
+          <img
+            class="zodiac-tiger"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/tiger-1.png"
+          />
+          <img
+            class="zodiac-rat"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/rat-1.png"
+          />
+
+          <img
+            class="zodiac-ox"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/ox-1.png"
+          />
+
+          <img
+            class="zodiac-rabbit"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/rabbit-1.png"
+          />
+
+          <img
+            class="zodiac-dragon"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/dragon-1.png"
+          />
+
+          <img
+            class="zodiac-snake"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/snake-1.png"
+          />
+
+          <img
+            class="zodiac-horse"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/horse-1.png"
+          />
+
+          <img
+            class="zodiac-sheep"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/sheep-1.png"
+          />
+
+          <img
+            class="zodiac-monkey"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/monkey-1.png"
+          />
+
+          <img
+            class="zodiac-rooster"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/rooster-1.png"
+          />
+
+          <img
+            class="zodiac-dog"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/dog-1.png"
+          />
+
+          <img
+            class="zodiac-pig"
+            src="https://www.chinesezodiac-birthdaycards.co.uk/wp-content/uploads/2018/12/pig-1.png"
+          />
+        </div>
+        <p class="greeting-message">
+          2022 is the Year of Tiger <br />
+          <br />Wishing you fullness of the vigor and vitality of the tiger!
+        </p>
+      </div>
+      <button class="zodiac-button">
+        Curious to know how your zodiac sign will shine this year? 🧐
+      </button>
+    
+       <script>
+      function zodiacResult() {
+        let birthYear = prompt("Which year were you born?");
+        let zodiacMessage = document.querySelector(".greeting-message");
+        let hideTiger = document.querySelector(".zodiac-tiger");
+        let changeToRat = document.querySelector(".zodiac-rat");
+        let changeToOx = document.querySelector(".zodiac-ox");
+        let changeToRabbit = document.querySelector(".zodiac-rabbit");
+        let changeToDragon = document.querySelector(".zodiac-dragon");
+        let changeToSnake = document.querySelector(".zodiac-snake");
+        let changeToHorse = document.querySelector(".zodiac-horse");
+        let changeToDog = document.querySelector(".zodiac-dog");
+        let changeToMonkey = document.querySelector(".zodiac-monkey");
+        let changeToRooster = document.querySelector(".zodiac-rooster");
+        let changeToPig = document.querySelector(".zodiac-pig");
+        let changeToSheep = document.querySelector(".zodiac-sheep");
+
+        if (birthYear !== 0) {
+          hideTiger.style.display = "none";
+          changeToRat.style.display = "none";
+          changeToOx.style.display = "none";
+          changeToRabbit.style.display = "none";
+          changeToDragon.style.display = "none";
+          changeToSnake.style.display = "none";
+          changeToHorse.style.display = "none";
+          changeToDog.style.display = "none";
+          changeToMonkey.style.display = "none";
+          changeToRooster.style.display = "none";
+          changeToPig.style.display = "none";
+          changeToSheep.style.display = "none";
+
+          if (birthYear % 12 === 4) {
+            changeToRat.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Rat! <br> <br> You will have luck in becoming a star student, gaining recognition for special talents, starting a new job or even a new business in the latter part of the year.";
+          } else if (birthYear % 12 === 5) {
+            changeToOx.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Ox! <br> <br> You can expect a good year. People will be more open to welcoming you, providing opportunities to build relationships.";
+          } else if (birthYear % 12 === 6) {
+            hideTiger.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Tiger! <br> <br> You will have a chance to resolve misunderstandings with family members. You will also have many opportunities to meet friends from overseas who can bring you new understanding of life.";
+          } else if (birthYear % 12 === 7) {
+            changeToRabbit.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Rabbit! <br> <br> You may receive support from your boss, earn a bit more in international trade, or be struck by inspiration that will help elevate your performance.";
+          } else if (birthYear % 12 === 8) {
+            changeToDragon.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Dragon! <br> <br> You will have a chance to reunite with former friends or colleagues who could bring you more work opportunities.";
+          } else if (birthYear % 12 === 9) {
+            changeToSnake.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Snake! <br> <br> You will receive backing from elders and noble ladies - be sure to take advantage of the support.";
+          } else if (birthYear % 12 === 10) {
+            changeToHorse.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Horse! <br> <br> There will be opportunities for work advancement. You will also have the chance to better cultivate interpersonal relationships.";
+          } else if (birthYear % 12 === 11) {
+            changeToSheep.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Sheep! <br> <br> Friends will offer you a lot of help. If you want to get a new job, go ask for advice or get help from your friends.";
+          } else if (birthYear % 12 === 0) {
+            changeToMonkey.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Monkey! <br> <br> Relationships with your family will be peaceful this year.";
+          } else if (birthYear % 12 === 1) {
+            changeToRooster.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Rooster! <br> <br> This is looking to be a great year for the rooster. You will have the chance to get promoted at work and social relationships will improve. You will also have lots of good food and wine.";
+          } else if (birthYear % 12 === 2) {
+            changeToDog.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Dog! <br> <br> Your talents will flourish at work, especially in creative areas, and you will be helped by a boost in interpersonal relationships.";
+          } else if (birthYear % 12 === 3) {
+            changeToPig.style.display = "inline-block";
+            zodiacMessage.innerHTML =
+              "Your Chinese zodiac sign is the Pig! <br> <br> Some lucky stars will also provide pigs with lots of opportunities in their careers - including salary increases and promotions.";
+          }
+        }
+      }
+
+      let dontKnowButton = document.querySelector(".zodiac-button");
+      dontKnowButton.addEventListener("click", zodiacResult);
+    </script>
+  </body>
+</html>
